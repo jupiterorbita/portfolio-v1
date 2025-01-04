@@ -1,0 +1,7 @@
+span.theme-toggle {
+  cursor: pointer;
+}
+
+.dark-mode .sun {
+    color: white;
+}

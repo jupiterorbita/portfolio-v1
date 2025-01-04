@@ -1,0 +1,13 @@
+/* CSS RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: width 0.5s ease, background-color 0.5s ease, height 0.5s ease; /* Add height transition */
+
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f0f0f0;
+}

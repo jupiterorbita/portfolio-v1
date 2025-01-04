@@ -1,0 +1,139 @@
+/* CSS RESET */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* outline: 1px dotted red; */
+  transition: width 0.5s ease, background-color 0.5s ease, height 0.5s ease, transform 0.5s ease;
+}
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  /* padding: 2rem; */
+  /* text-align: center; */
+}
+
+
+:root {
+  --background-color: #f4f4f4;
+  --text-color: #333;
+  --nav-background-color: #333;
+  --nav-text-color: #fff;
+  --nav-hover-color: yellow;
+  --focus-color: #ff0; /* Add focus color */
+  --primary-color: #007bff;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  font-size: 1 rem;
+  line-height: 1.5;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  /* margin: 0;
+  padding: 0; */
+}
+
+body.dark-mode {
+  --background-color: #333;
+  --text-color: #f4f4f4;
+  --nav-background-color: #555;
+  --nav-text-color: #f4f4f4;
+  --nav-hover-color: #ff0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+a:focus, button:focus {
+  outline: 2px solid var(--focus-color); /* Add focus outline */
+  outline-offset: 2px;
+}
+
+.wrapper {
+  width: 80%;
+  margin: 0 auto;
+  overflow: hidden;
+  /* transition: width 0.5s ease, background-color 0.5s ease, height 0.5s ease; Add height transition */
+
+  #theme-toggle {
+    cursor: pointer;
+  }
+  nav {
+      background-color: var(--nav-background-color);
+      color: var(--nav-text-color);
+      padding: 10px;
+      text-align: center;
+      height: 50px; /* Change min-height to height */
+      transition: width 0.5s ease, background-color 0.5s ease, height 0.5s ease; /* Add height transition */
+
+      ul {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          li {
+            margin: 0 10px;
+            &:focus-within {
+              outline: none;
+            }
+          }
+      }
+
+      a { color: var(--nav-text-color); }
+      a:hover { color: var(--nav-hover-color); }
+
+      a:focus,
+      .theme-toggle:focus {
+          outline: 2px solid var(--focus-color);
+          outline-offset: 2px;
+          border-radius: 4px;
+      }
+  }
+}
+
+.theme-toggle:focus {
+    outline: 2px solid var(--focus-color);
+    outline-offset: 2px;
+    border-radius: 4px;
+}
+
+/* some default media queries */
+/* kinda like ipad */
+@media screen and (max-width: 768px) {
+  .wrapper {
+      width: 90%;
+
+      nav {
+          background-color: green;
+          height: 150px; /* Change min-height to height */
+      }
+  }
+}
+
+/* small phone */
+@media screen and (max-width: 500px) {
+  .wrapper {
+      width: 95%;
+
+      nav {
+          background-color: blue;
+          height: 50px; /* Change min-height to height */
+      }
+  }
+}
+
